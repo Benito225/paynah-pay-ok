@@ -51,13 +51,6 @@
     </div>
 
     <script>
-        const sound = new Howl({
-            src: ['./images/images/vid_0.mp4'],
-            sprite: {
-                beep: [2000, 3000]
-            },
-        });
-        
         const animationContainer = document.getElementById('pay-animation');
         const animation = lottie.loadAnimation({
             container: animationContainer,
@@ -71,6 +64,13 @@
         });
 
         animationContainer.addEventListener("click", (e) => {
+            const sound = new Howl({
+                src: ['./images/images/vid_0.mp4'],
+                sprite: {
+                    beep: [2000, 3000]
+                },
+            });
+            
             animation.goToAndPlay(0, true);
 
             setTimeout(() => {
